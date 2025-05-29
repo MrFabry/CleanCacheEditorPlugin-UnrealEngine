@@ -1,5 +1,4 @@
 ﻿// Fabrizio Pasini.
-
 #pragma once
 
 #include "CoreMinimal.h"

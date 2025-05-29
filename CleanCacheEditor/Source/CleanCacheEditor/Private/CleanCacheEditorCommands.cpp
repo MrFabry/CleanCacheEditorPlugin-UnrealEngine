@@ -1,5 +1,4 @@
 ﻿// Fabrizio Pasini.
-
 #include "CleanCacheEditorCommands.h"
 
 #define LOCTEXT_NAMESPACE "FCleanCacheEditorModule"

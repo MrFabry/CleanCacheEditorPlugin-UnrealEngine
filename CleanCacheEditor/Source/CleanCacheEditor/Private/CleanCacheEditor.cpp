@@ -1,5 +1,4 @@
 // Fabrizio Pasini.
-
 #include "CleanCacheEditor.h"
 #include "CleanCacheEditorStyle.h"
 #include "CleanCacheEditorCommands.h"
@@ -100,7 +99,7 @@ void FCleanCacheEditorModule::PluginButtonClicked()
     EAppReturnType::Type Result = FMessageDialog::Open(
         EAppMsgType::YesNo, 
         DialogMessage, 
-        &DialogTitle
+        DialogTitle
     );
 
     if (Result == EAppReturnType::Yes)
@@ -292,10 +291,12 @@ void FCleanCacheEditorModule::OnCleanupCompleted(bool bSuccess, int32 DeletedFol
         ShowNotification(ErrorText, SNotificationItem::CS_Fail);
         
         // Ask if user still wants to restart despite errors
+        const FText RestartTitle = LOCTEXT("RestartDespiteErrorsTitle", "Restart Editor?");
         EAppReturnType::Type Result = FMessageDialog::Open(
             EAppMsgType::YesNo,
-            LOCTEXT("RestartDespiteErrors", "Some files could not be deleted. Do you still want to restart the editor?")
-        );
+            LOCTEXT("RestartDespiteErrors", "Some files could not be deleted. Do you still want to restart the editor?"),
+            RestartTitle
+            );
         
         if (Result == EAppReturnType::Yes)
         {

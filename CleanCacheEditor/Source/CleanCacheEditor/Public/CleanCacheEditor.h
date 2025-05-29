@@ -1,5 +1,4 @@
-﻿// Copyright 2024. All Rights Reserved.
-
+﻿// Fabrizio Pasini.
 #pragma once
 
 #include "CoreMinimal.h"

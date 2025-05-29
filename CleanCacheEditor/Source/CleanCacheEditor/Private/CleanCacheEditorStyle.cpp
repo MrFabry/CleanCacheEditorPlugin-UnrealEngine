@@ -1,5 +1,4 @@
 ﻿// Fabrizio Pasini.
-
 #include "CleanCacheEditorStyle.h"
 #include "Styling/SlateStyleRegistry.h"
 #include "Framework/Application/SlateApplication.h"
